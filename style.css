@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: white;
+    z-index: 2;
+    transition: 0.7s;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle {
+    position: relative;
+    color: white;
+    width: 60px;
+    height: 60px;
+    background: url('burger-menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url('close-menu.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
+.menu {}
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: #690202;
+    mix-blend-mode: overlay; */
+}
+
+.portfolio-block {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.portfolio-image{
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-image img {
+    height: auto;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.portfolio-text {
+    color: rgb(255, 199, 199);
+    text-align: center;
+    font-size: 3em;
+    font-weight: 600;
+    flex-wrap: wrap;
+}
+.portfolio-title{
+    max-width: 100%;
+}
+.button {
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    justify-content: center;	
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 1em;
+    background:rgb(255, 199, 199);
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.button-text{
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.button:hover {
+    color: rgb(255, 199, 199);
+    background-color: white;
+    letter-spacing: 6px;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social img {
+    width: 60px;
+}
+
+
+.social li a {
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+
+.social li a:hover {
+    transform: scale(0.5) translateY(-15px);
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    text-transform: none;
+    font-size: 24px;
+    color: #111;
+}
+
+.menu ul li a:hover {
+    color: red;
+}
+
+@media (max-width: 781px) {
+    .portfolio-block {
+        margin-top: 50px;
+    }
+
+    .portfolio-image img{
+        max-width: 200px;
+    }
+
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+    .portfolio-title{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+}
